@@ -7,12 +7,16 @@ header {
   border-bottom: 3px solid black;
   text-shadow: 1px 1px 1px #333;
   text-align: center;
+  margin-bottom: 10px;
 }
+ h1, h2, h4 {
+   margin: 5px auto;
+ }
 
 p {
   text-shadow: 1px 1px 1px #888;
   text-align: center;
-  font-size: 36px;
+  font-size: 18px;
   margin-top: 10px;
 }
 
@@ -28,29 +32,16 @@ img {
 
 .random {
   max-width: 300px;
-  height: 150px;
+  height: 100px;
   border: 2px black solid;
   border-radius: 5px;
   box-shadow: 1px 1px 1px #333;
   padding: 0;
-  margin: 10px auto;
 }
 
-@media screen and (min-width:762px) {
-  .random {
-    max-width: none;
-    height: 200px;
-  }
-}
-
-@media screen and (min-width:992px) {
-  .random {
-    height: 300px;
-  }
-}
 
 /* entire container, keeps perspective */
-.flip-container {
+/.flip-container {
 	perspective: 1000px;
 }
 
@@ -64,11 +55,13 @@ img {
 	height: 100%;
 }
 
+
 /* flip speed goes here */
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
 	position: relative;
+  height: 100px;
 }
 
 /* hide back of pane during swap */
@@ -89,4 +82,25 @@ img {
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+}
+
+@media screen and (min-width:762px) {
+  .random {
+    max-width: none;
+    height: 200px;
+  }
+
+  .flipper {
+    height: 100%;
+  }
+
+  p {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .random {
+    height: 200px;
+  }
 }
